@@ -13,6 +13,8 @@ exports.product_create = function (req, res) {
         }
     );
 
+
+
     product.save(function (err) {
         if (err) {
             return next(err);
@@ -26,6 +28,7 @@ exports.product_details = function (req, res) {
         if (err) return next(err);
         res.send(product);
     })
+
 };
 
 exports.product_update = function (req, res) {
